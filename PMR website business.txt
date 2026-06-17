@@ -1,0 +1,9 @@
+Important part: the contact form
+
+The form will not send emails yet until you connect it to something like Formspree.
+
+Later, replace this line:
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+with the real Formspree link after making a free Formspree account.
