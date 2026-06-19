@@ -9,6 +9,8 @@ Later, replace this line:
 with the real Formspree link after making a free Formspree account.
 
 For future changes, use this in VSCode terminal:
+git pull
+# edit files
 git add .
-git commit -m "Describe what changed"
+git commit -m "Describe changes"
 git push
