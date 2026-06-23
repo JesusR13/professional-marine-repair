@@ -104,6 +104,25 @@
       text-align: center;
       padding: 20px;
     }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-info {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info a {
+      color: #0b2942;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -113,7 +132,9 @@
   </header>
 
   <nav>
+    <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#portfolio">Past Jobs</a>
     <a href="#contact">Request a Job</a>
   </nav>
 
@@ -130,44 +151,131 @@
   <section id="services">
     <h2>Services</h2>
 
-    <div class="services">
-      <div class="card">
-        <h3>Boat Building</h3>
-        <p>Custom boat construction and marine fabrication services.</p>
-      </div>
+    <section id="about">
+  <h2>About Us</h2>
+  <p>
+    South Marine Systems LLC provides industrial marine maintenance, welding,
+    repair, and mechanical services for boats, cargo vessels, facilities, and
+    large-scale marine projects.
+  </p>
+  <p>
+    Our team has over 10 years of experience and certifications in AWS and ASME.
+    We focus on dependable work, practical solutions, and professional service
+    for marine and industrial clients.
+  </p>
+</section>
 
-      <div class="card">
-        <h3>Boat Repair</h3>
-        <p>Repair work for damaged vessels, parts, and marine structures.</p>
-      </div>
+<section id="services">
+  <h2>Our Services</h2>
 
-      <div class="card">
-        <h3>Commercial Vessel Work</h3>
-        <p>Contract work for large boats, cargo vessels, and marine companies.</p>
-      </div>
+  <div class="services">
+    <div class="card">
+      <h3>Industrial Maintenance</h3>
+      <p>Maintenance support for marine, industrial, and facility operations.</p>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Request a Job</h2>
-    <p>Fill out the form below to ask about hiring us for contract work.</p>
+    <div class="card">
+      <h3>Pipe Welding and Repair</h3>
+      <p>Welding and repair services for piping systems and related structures.</p>
+    </div>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>Your Name</label>
-      <input type="text" name="name" required />
+    <div class="card">
+      <h3>General Facility Maintenance</h3>
+      <p>Repair, installation, and maintenance work for commercial facilities.</p>
+    </div>
 
-      <label>Your Email</label>
-      <input type="email" name="email" required />
+    <div class="card">
+      <h3>In-House Engineering</h3>
+      <p>Engineering support for repair planning, fabrication, and project needs.</p>
+    </div>
 
-      <label>Phone Number</label>
-      <input type="text" name="phone" />
+    <div class="card">
+      <h3>Ultrasonic Thickness Gauging</h3>
+      <p>Thickness testing for metal structures, vessels, and industrial equipment.</p>
+    </div>
 
-      <label>Describe the Job</label>
-      <textarea name="message" rows="6" required></textarea>
+    <div class="card">
+      <h3>Mechanical Repairs and Installations</h3>
+      <p>Mechanical repair and installation services for marine and industrial jobs.</p>
+    </div>
+  </div>
+</section>
 
-      <button type="submit">Send Inquiry</button>
-    </form>
-  </section>
+<section id="portfolio">
+  <h2>Past Jobs</h2>
+  <p>
+    Below are examples of marine and industrial work completed by our team.
+    More project photos and details will be added soon.
+  </p>
+
+  <div class="portfolio-grid">
+    <div class="card">
+      <h3>Cargo Vessel Repair</h3>
+      <p>
+        Maintenance and repair work on large cargo vessels, including structural
+        and mechanical support.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Welding and Fabrication</h3>
+      <p>
+        Welding, metal repair, and fabrication services for marine and industrial
+        projects.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Mechanical Maintenance</h3>
+      <p>
+        Mechanical repairs, installations, and maintenance support for work sites
+        and facilities.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Reach out to ask about hiring us for marine, welding, or industrial contract work.</p>
+
+  <div class="contact-info">
+    <p><strong>Address:</strong><br>
+      1214 West 6th St<br>
+      Ashtabula, Ohio 44004
+    </p>
+
+    <p><strong>Jesus Rodriguez, President</strong><br>
+      <a href="tel:4404099957">(440) 409-9957</a>
+    </p>
+
+    <p><strong>Carlos Barranca, Manager</strong><br>
+      <a href="tel:2164564261">(216) 456-4261</a>
+    </p>
+
+    <p><strong>Email:</strong><br>
+      <a href="mailto:southmarinesystemsllc@gmail.com">
+        southmarinesystemsllc@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+
+    <label>Your Email</label>
+    <input type="email" name="email" required>
+
+    <label>Phone Number</label>
+    <input type="text" name="phone">
+
+    <label>Describe the Job</label>
+    <textarea name="message" rows="6" required></textarea>
+
+    <button type="submit">Send Inquiry</button>
+  </form>
+</section>
 
   <footer>
     <p>&copy; 2026 Professional Marine Repair. All rights reserved.</p>
