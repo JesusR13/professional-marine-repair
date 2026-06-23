@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marine Contracting Services</title>
+  <title>Professional Marine Repair</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       font-family: Arial, sans-serif;
       background-color: #f4f8fb;
       color: #1f2933;
@@ -16,29 +27,23 @@
     header {
       background-color: #455079;
       color: white;
-      padding: 0px 0px;
       text-align: center;
+      padding: 25px 20px 20px;
     }
+
     .logo {
       max-width: 420px;
       width: 90%;
       height: auto;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-    }
-
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
     nav {
       background-color: #123d5a;
       padding: 12px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
@@ -48,16 +53,36 @@
       font-weight: bold;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+    }
+
     section {
       max-width: 900px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 55px 20px;
     }
 
-    .services {
+    h2 {
+      margin-top: 0;
+      color: #0b2942;
+    }
+
+    .intro-text {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .services,
+    .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
+      margin-top: 25px;
     }
 
     .card {
@@ -67,6 +92,24 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
+    .card h3 {
+      margin-top: 0;
+      color: #0b2942;
+    }
+
+    .contact-info {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info a {
+      color: #0b2942;
+      font-weight: bold;
+    }
+
     form {
       background: white;
       padding: 25px;
@@ -74,14 +117,25 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    input, textarea {
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
       width: 100%;
       padding: 12px;
-      margin-top: 8px;
       margin-bottom: 18px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
     }
 
     button {
@@ -99,36 +153,38 @@
     }
 
     footer {
+      width: 100%;
       background-color: #0b2942;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 24px 20px;
+      margin-top: 40px;
     }
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    footer p {
+      margin: 0;
     }
 
-    .contact-info {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
 
-    .contact-info a {
-      color: #0b2942;
-      font-weight: bold;
+      section {
+        padding: 40px 18px;
+      }
+
+      .logo {
+        width: 95%;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-      <img src="images/pmr-logo.png" alt="Professional Marine Repair Logo" class="logo">
+    <img src="images/pmr-logo.png" alt="Professional Marine Repair Logo" class="logo">
   </header>
 
   <nav>
@@ -138,144 +194,145 @@
     <a href="#contact">Request a Job</a>
   </nav>
 
-  <section>
-    <h2>About Us</h2>
-    <p>
-      We provide professional marine construction and repair services for boats,
-      cargo vessels, and other large-scale marine projects. With experience in
-      boat building, structural repair, and contract marine work, we are ready
-      to help with reliable, hands-on service.
-    </p>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-
+  <main>
     <section id="about">
-  <h2>About Us</h2>
-  <p>
-    South Marine Systems LLC provides industrial marine maintenance, welding,
-    repair, and mechanical services for boats, cargo vessels, facilities, and
-    large-scale marine projects.
-  </p>
-  <p>
-    Our team has over 10 years of experience and certifications in AWS and ASME.
-    We focus on dependable work, practical solutions, and professional service
-    for marine and industrial clients.
-  </p>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>Industrial Maintenance</h3>
-      <p>Maintenance support for marine, industrial, and facility operations.</p>
-    </div>
-
-    <div class="card">
-      <h3>Pipe Welding and Repair</h3>
-      <p>Welding and repair services for piping systems and related structures.</p>
-    </div>
-
-    <div class="card">
-      <h3>General Facility Maintenance</h3>
-      <p>Repair, installation, and maintenance work for commercial facilities.</p>
-    </div>
-
-    <div class="card">
-      <h3>In-House Engineering</h3>
-      <p>Engineering support for repair planning, fabrication, and project needs.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ultrasonic Thickness Gauging</h3>
-      <p>Thickness testing for metal structures, vessels, and industrial equipment.</p>
-    </div>
-
-    <div class="card">
-      <h3>Mechanical Repairs and Installations</h3>
-      <p>Mechanical repair and installation services for marine and industrial jobs.</p>
-    </div>
-  </div>
-</section>
-
-<section id="portfolio">
-  <h2>Past Jobs</h2>
-  <p>
-    Below are examples of marine and industrial work completed by our team.
-    More project photos and details will be added soon.
-  </p>
-
-  <div class="portfolio-grid">
-    <div class="card">
-      <h3>Cargo Vessel Repair</h3>
-      <p>
-        Maintenance and repair work on large cargo vessels, including structural
-        and mechanical support.
+      <h2>About Us</h2>
+      <p class="intro-text">
+        Professional Marine Repair provides professional marine construction,
+        repair, welding, mechanical, and industrial maintenance services for boats,
+        cargo vessels, facilities, and large-scale marine projects.
       </p>
-    </div>
 
-    <div class="card">
-      <h3>Welding and Fabrication</h3>
-      <p>
-        Welding, metal repair, and fabrication services for marine and industrial
-        projects.
+      <p class="intro-text">
+        With experience in boat building, structural repair, contract marine work,
+        fabrication, and facility maintenance, our team is ready to help with
+        dependable work, practical solutions, and reliable hands-on service.
       </p>
-    </div>
+    </section>
 
-    <div class="card">
-      <h3>Mechanical Maintenance</h3>
+    <section id="services">
+      <h2>Services</h2>
       <p>
-        Mechanical repairs, installations, and maintenance support for work sites
-        and facilities.
+        We offer marine and industrial support for repair, maintenance,
+        installation, fabrication, and project needs.
       </p>
-    </div>
-  </div>
-</section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Reach out to ask about hiring us for marine, welding, or industrial contract work.</p>
+      <div class="services">
+        <div class="card">
+          <h3>Industrial Maintenance</h3>
+          <p>Maintenance support for marine, industrial, and facility operations.</p>
+        </div>
 
-  <div class="contact-info">
-    <p><strong>Address:</strong><br>
-      1214 West 6th St<br>
-      Ashtabula, Ohio 44004
-    </p>
+        <div class="card">
+          <h3>Pipe Welding and Repair</h3>
+          <p>Welding and repair services for piping systems and related structures.</p>
+        </div>
 
-    <p><strong>Jesus Rodriguez, President</strong><br>
-      <a href="tel:4404099957">(440) 409-9957</a>
-    </p>
+        <div class="card">
+          <h3>General Facility Maintenance</h3>
+          <p>Repair, installation, and maintenance work for commercial facilities.</p>
+        </div>
 
-    <p><strong>Carlos Barranca, Manager</strong><br>
-      <a href="tel:2164564261">(216) 456-4261</a>
-    </p>
+        <div class="card">
+          <h3>In-House Engineering</h3>
+          <p>Engineering support for repair planning, fabrication, and project needs.</p>
+        </div>
 
-    <p><strong>Email:</strong><br>
-      <a href="mailto:southmarinesystemsllc@gmail.com">
-        southmarinesystemsllc@gmail.com
-      </a>
-    </p>
-  </div>
+        <div class="card">
+          <h3>Ultrasonic Thickness Gauging</h3>
+          <p>Thickness testing for metal structures, vessels, and industrial equipment.</p>
+        </div>
 
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <label>Your Name</label>
-    <input type="text" name="name" required>
+        <div class="card">
+          <h3>Mechanical Repairs and Installations</h3>
+          <p>Mechanical repair and installation services for marine and industrial jobs.</p>
+        </div>
+      </div>
+    </section>
 
-    <label>Your Email</label>
-    <input type="email" name="email" required>
+    <section id="portfolio">
+      <h2>Past Jobs</h2>
+      <p>
+        Below are examples of marine and industrial work completed by our team.
+        More project photos and details will be added soon.
+      </p>
 
-    <label>Phone Number</label>
-    <input type="text" name="phone">
+      <div class="portfolio-grid">
+        <div class="card">
+          <h3>Cargo Vessel Repair</h3>
+          <p>
+            Maintenance and repair work on large cargo vessels, including structural
+            and mechanical support.
+          </p>
+        </div>
 
-    <label>Describe the Job</label>
-    <textarea name="message" rows="6" required></textarea>
+        <div class="card">
+          <h3>Welding and Fabrication</h3>
+          <p>
+            Welding, metal repair, and fabrication services for marine and industrial
+            projects.
+          </p>
+        </div>
 
-    <button type="submit">Send Inquiry</button>
-  </form>
-</section>
+        <div class="card">
+          <h3>Mechanical Maintenance</h3>
+          <p>
+            Mechanical repairs, installations, and maintenance support for work sites
+            and facilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        Reach out to ask about hiring us for marine repair, welding,
+        mechanical work, or industrial contract services.
+      </p>
+
+      <div class="contact-info">
+        <p>
+          <strong>Address:</strong><br>
+          1214 West 6th St<br>
+          Ashtabula, Ohio 44004
+        </p>
+
+        <p>
+          <strong>Jesus Rodriguez, President</strong><br>
+          <a href="tel:4404099957">(440) 409-9957</a>
+        </p>
+
+        <p>
+          <strong>Carlos Barranca, Manager</strong><br>
+          <a href="tel:2164564261">(216) 456-4261</a>
+        </p>
+
+        <p>
+          <strong>Email:</strong><br>
+          <a href="mailto:southmarinesystemsllc@gmail.com">
+            southmarinesystemsllc@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="text" name="phone">
+
+        <label for="message">Describe the Job</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Professional Marine Repair. All rights reserved.</p>

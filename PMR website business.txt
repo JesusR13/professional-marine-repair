@@ -48,3 +48,7 @@ Support for proxy.
 CORS Enabled (disabled by default)
 Multi-root workspace supported.
 Support for any file even dynamic pages through Live Server Web Extension.
+
+need to replace this when set up Formspree:
+
+https://formspree.io/f/YOUR_FORM_ID
